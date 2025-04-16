@@ -1,0 +1,57 @@
+body {
+  background: #111;
+  color: #fff;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#game {
+  position: relative;
+  width: 800px;
+  height: 600px;
+  background: #222;
+  border: 2px solid #00ffe0;
+}
+
+#score {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+}
+
+.player {
+  position: absolute;
+  width: 10px;
+  height: 100px;
+  background: #00ffe0;
+}
+
+#player {
+  left: 0;
+}
+
+#opponent {
+  right: 0;
+}
+
+#ball {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #ff4081;
+  border-radius: 50%;
+}
+
+#controls {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
