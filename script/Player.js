@@ -1,10 +1,11 @@
 export class Player {
-  constructor(el, side, gameHeight) {
-    this.el = el;
-    this.height = 100;
-    this.speed = 4;
+  constructor(element, side, gameHeight) {
+    this.el = element;
     this.side = side;
+    this.height = 80;
+    this.width = 15;
     this.y = (gameHeight - this.height) / 2;
+    this.speed = 6;
   }
 
   updateVisual() {
@@ -13,16 +14,11 @@ export class Player {
 
   move(dy) {
     this.y += dy;
-    const max = 600 - this.height;
-    this.y = Math.max(0, Math.min(this.y, max));
+    this.y = Math.max(0, Math.min(this.y, 600 - this.height)); // Clamp to game height
     this.updateVisual();
   }
 
   getCenterY() {
     return this.y + this.height / 2;
-  }
-
-  fire() {
-    // placeholder if needed
   }
 }
